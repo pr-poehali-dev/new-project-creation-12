@@ -101,7 +101,7 @@ export default function ContactForm() {
         <div className="md:col-span-2 text-sm text-red-300">{error}</div>
       )}
       <div className="md:col-span-2 flex justify-end pt-1">
-        <Button type="submit" size="lg" disabled={loading} className="rounded-full px-8 bg-white text-primary hover:bg-white/90 w-full md:w-auto font-semibold">
+        <Button type="submit" size="lg" disabled={loading} variant="outline" className="rounded-full px-8 bg-white !text-primary border-white hover:bg-white/90 w-full md:w-auto font-semibold">
           <Icon name={loading ? 'Loader' : 'Send'} size={16} className={loading ? 'animate-spin' : ''} />
           {loading ? 'Отправляем...' : 'Отправить заявку'}
         </Button>

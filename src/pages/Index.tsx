@@ -136,7 +136,7 @@ const Index = () => {
               FamilyClassIstra
             </span>
           </button>
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-6">
             {NAV.map((n) => (
               <button
                 key={n.id}
@@ -149,16 +149,16 @@ const Index = () => {
           </nav>
           <Button
             onClick={() => scrollTo('contacts')}
-            className="hidden md:inline-flex rounded-full"
+            className="hidden lg:inline-flex rounded-full"
           >
             Записаться
           </Button>
-          <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+          <button className="lg:hidden" onClick={() => setMenuOpen(!menuOpen)}>
             <Icon name={menuOpen ? 'X' : 'Menu'} size={26} />
           </button>
         </div>
         {menuOpen && (
-          <div className="md:hidden absolute top-20 left-0 right-0 border-t border-border bg-white shadow-lg px-4 py-3 flex flex-col gap-1 max-h-[calc(100vh-80px)] overflow-y-auto z-50">
+          <div className="lg:hidden absolute top-20 left-0 right-0 border-t border-border bg-white shadow-lg px-4 py-3 flex flex-col gap-1 max-h-[calc(100vh-80px)] overflow-y-auto z-50">
             {NAV.map((n) => (
               <button
                 key={n.id}

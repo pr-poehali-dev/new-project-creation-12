@@ -132,7 +132,9 @@ const Index = () => {
         <div className="container flex items-center justify-between h-16">
           <button onClick={() => scrollTo('hero')} className="flex items-center gap-2">
             <span className="text-xl">🌱</span>
-            <span className="font-display text-lg font-semibold text-foreground whitespace-nowrap">FamilyClassIstra</span>
+            <span className="font-display text-lg font-semibold whitespace-nowrap inline-block border-b-2 border-[#8B7355] pb-0.5">
+              <span style={{color:'#4A7C59'}}>Family</span><span style={{color:'#5C3D2E'}}>Class</span><span style={{color:'#4A7C59'}}>Istra</span>
+            </span>
           </button>
           <nav className="hidden lg:flex items-center gap-6">
             {NAV.map((n) => (

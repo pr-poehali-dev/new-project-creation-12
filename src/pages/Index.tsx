@@ -133,7 +133,7 @@ const Index = () => {
           <button onClick={() => scrollTo('hero')} className="flex items-center gap-2">
             <span className="text-3xl">🌱</span>
             <span className="font-display text-2xl font-semibold tracking-tight">
-              familyclassistra
+              FamilyClassIstra
             </span>
           </button>
           <nav className="hidden md:flex items-center gap-6">

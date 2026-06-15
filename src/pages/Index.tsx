@@ -157,23 +157,26 @@ const Index = () => {
             <Icon name={menuOpen ? 'X' : 'Menu'} size={26} />
           </button>
         </div>
-        {menuOpen && (
-          <div className="lg:hidden absolute top-20 left-0 right-0 border-t border-border bg-white shadow-lg px-4 py-3 flex flex-col gap-1 max-h-[calc(100vh-80px)] overflow-y-auto z-50">
+      </header>
+
+      {menuOpen && (
+        <div className="lg:hidden fixed top-20 left-0 right-0 bottom-0 bg-white z-40 flex flex-col overflow-y-auto border-t border-border">
+          <div className="flex flex-col px-6 py-4 gap-1">
             {NAV.map((n) => (
               <button
                 key={n.id}
                 onClick={() => scrollTo(n.id)}
-                className="text-left py-3 px-2 text-muted-foreground hover:text-primary transition-colors rounded-lg border-b border-border/50 last:border-0"
+                className="text-left w-full py-4 text-lg text-foreground hover:text-primary transition-colors border-b border-border/50 last:border-0"
               >
                 {n.label}
               </button>
             ))}
-            <Button onClick={() => scrollTo('contacts')} className="rounded-full mt-3 mb-1 w-full">
+            <Button onClick={() => scrollTo('contacts')} className="rounded-full mt-4 w-full">
               Записаться на пробный день
             </Button>
           </div>
-        )}
-      </header>
+        </div>
+      )}
 
       {/* Hero */}
       <section id="hero" className="container pt-36 pb-20 md:pt-44 md:pb-28">

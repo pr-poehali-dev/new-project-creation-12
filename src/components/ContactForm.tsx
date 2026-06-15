@@ -8,18 +8,34 @@ const CLASSES = [
   'Дошкольник', 'Ещё не знаю',
 ];
 
+const API_URL = 'https://functions.poehali.dev/d17c623d-8a71-4219-befa-14b89d6e7dac';
+
 export default function ContactForm() {
   const [form, setForm] = useState({ name: '', phone: '', grade: '', comment: '' });
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const set = (k: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
     setForm((p) => ({ ...p, [k]: e.target.value }));
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const msg = `Заявка с сайта:%0AИмя: ${form.name}%0AТелефон: ${form.phone}%0AКласс: ${form.grade}%0AКомментарий: ${form.comment}`;
-    window.open(`https://t.me/familyclassistra?text=${msg}`, '_blank');
-    setSent(true);
+    setLoading(true);
+    setError('');
+    try {
+      const res = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error('Ошибка отправки');
+      setSent(true);
+    } catch {
+      setError('Не удалось отправить. Позвоните нам: +7-916-640-05-06');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const inputCls = 'w-full rounded-xl bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 px-4 py-3 text-sm outline-none focus:border-primary-foreground/60 transition-colors';
@@ -31,8 +47,8 @@ export default function ContactForm() {
           <Icon name="Check" size={28} />
         </div>
         <p className="font-display text-2xl font-semibold">Спасибо!</p>
-        <p className="opacity-75 text-sm">Откроется Telegram — отправьте сообщение и мы свяжемся с вами.</p>
-        <button onClick={() => setSent(false)} className="text-xs underline underline-offset-4 opacity-60 mt-2">
+        <p className="opacity-75 text-sm">Заявка отправлена — мы получили её в Telegram и на почту. Скоро свяжемся!</p>
+        <button onClick={() => { setSent(false); setForm({ name: '', phone: '', grade: '', comment: '' }); }} className="text-xs underline underline-offset-4 opacity-60 mt-2">
           Отправить ещё раз
         </button>
       </div>
@@ -81,10 +97,13 @@ export default function ContactForm() {
           className={inputCls + ' resize-none'}
         />
       </div>
+      {error && (
+        <div className="md:col-span-2 text-sm text-red-300">{error}</div>
+      )}
       <div className="md:col-span-2 flex justify-end pt-1">
-        <Button type="submit" size="lg" className="rounded-full px-8 bg-primary-foreground text-primary hover:bg-primary-foreground/90 w-full md:w-auto">
-          <Icon name="Send" size={16} />
-          Отправить заявку
+        <Button type="submit" size="lg" disabled={loading} className="rounded-full px-8 bg-primary-foreground text-primary hover:bg-primary-foreground/90 w-full md:w-auto">
+          <Icon name={loading ? 'Loader' : 'Send'} size={16} className={loading ? 'animate-spin' : ''} />
+          {loading ? 'Отправляем...' : 'Отправить заявку'}
         </Button>
       </div>
     </form>

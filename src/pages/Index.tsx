@@ -132,8 +132,8 @@ const Index = () => {
         <div className="container flex items-center justify-between h-16">
           <button onClick={() => scrollTo('hero')} className="flex items-center gap-2">
             <span className="text-xl">🌱</span>
-            <span className="font-display text-lg font-semibold whitespace-nowrap inline-block border-b-2 border-[#8B7355] pb-0.5">
-              <span style={{color:'#4A7C59'}}>Family</span><span style={{color:'#5C3D2E'}}>Class</span><span style={{color:'#4A7C59'}}>Istra</span>
+            <span className="font-display text-lg font-semibold whitespace-nowrap inline-block border-b border-[#4A7C59] pb-0.5">
+              <span style={{color:'#4A7C59'}}>Family</span><span style={{color:'#7AB592'}}>Class</span><span style={{color:'#2B5F8E'}}>Istra</span>
             </span>
           </button>
           <nav className="hidden lg:flex items-center gap-6">
@@ -433,7 +433,9 @@ const Index = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
             <div className="flex items-center gap-2">
               <span className="text-2xl">🌱</span>
-              <span className="font-display text-xl font-semibold text-foreground">FamilyClassIstra</span>
+              <span className="font-display text-xl font-semibold whitespace-nowrap inline-block border-b border-[#4A7C59] pb-0.5">
+                <span style={{color:'#4A7C59'}}>Family</span><span style={{color:'#7AB592'}}>Class</span><span style={{color:'#2B5F8E'}}>Istra</span>
+              </span>
             </div>
             <p className="text-sm text-muted-foreground text-center md:text-right">
               Семейная школа, г/о Истра, д. Рычково<br />

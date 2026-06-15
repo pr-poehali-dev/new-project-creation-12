@@ -120,6 +120,16 @@
   .wood-texture {
     position: relative;
     overflow: hidden;
+    color: #ffffff !important;
+  }
+  .wood-texture h2,
+  .wood-texture h3,
+  .wood-texture p,
+  .wood-texture span,
+  .wood-texture label,
+  .wood-texture a,
+  .wood-texture div {
+    color: #ffffff !important;
   }
   .wood-texture::before {
     content: "";

@@ -1,6 +1,7 @@
 
 import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
+import ContactForm from '@/components/ContactForm';
 import {
   Accordion,
   AccordionContent,
@@ -374,7 +375,7 @@ const Index = () => {
       {/* Contacts */}
       <section id="contacts" className="container py-20">
         <div className="wood-texture bg-primary text-primary-foreground rounded-2xl md:rounded-[2.5rem] p-6 md:p-16">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-10">
             <div>
               <p className="font-hand text-2xl mb-3 opacity-90">г. Истра, Московская область</p>
               <h2 className="font-display text-3xl md:text-5xl font-semibold mb-4">
@@ -412,6 +413,11 @@ const Index = () => {
                 <span className="text-sm md:text-base">Моск. обл., г/о Истра, д. Рычково — на карте →</span>
               </a>
             </div>
+          </div>
+
+          {/* Форма записи */}
+          <div className="border-t border-primary-foreground/20 pt-8">
+            <ContactForm />
           </div>
         </div>
       </section>

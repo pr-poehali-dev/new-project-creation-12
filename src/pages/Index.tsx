@@ -149,7 +149,7 @@ const Index = () => {
       </header>
 
       {/* Hero */}
-      <section id="hero" className="container pt-36 pb-20 md:pt-44 md:pb-28">
+      <section id="hero" className="container pt-20 pb-20 md:pt-44 md:pb-28">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-float-up">
             <p className="font-hand text-3xl text-primary mb-4">г. Истра · семейная школа</p>

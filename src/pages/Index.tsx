@@ -130,9 +130,9 @@ const Index = () => {
       {/* Header */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-white/80 border-b border-border">
         <div className="container flex items-center justify-between h-20">
-          <button onClick={() => scrollTo('hero')} className="flex items-center gap-2">
-            <span className="text-3xl">🌱</span>
-            <span className="font-display text-2xl font-semibold tracking-tight">
+          <button onClick={() => scrollTo('hero')} className="flex items-center gap-2 min-w-0">
+            <span className="text-2xl shrink-0">🌱</span>
+            <span className="font-display text-lg md:text-2xl font-semibold tracking-tight whitespace-nowrap">
               FamilyClassIstra
             </span>
           </button>
@@ -158,18 +158,18 @@ const Index = () => {
           </button>
         </div>
         {menuOpen && (
-          <div className="md:hidden border-t border-border bg-white/95 px-6 py-4 flex flex-col gap-3">
+          <div className="md:hidden border-t border-border bg-white/95 px-4 py-3 flex flex-col gap-1 max-h-[calc(100vh-80px)] overflow-y-auto">
             {NAV.map((n) => (
               <button
                 key={n.id}
                 onClick={() => scrollTo(n.id)}
-                className="text-left py-1 text-muted-foreground"
+                className="text-left py-2 px-2 text-muted-foreground hover:text-primary transition-colors rounded-lg"
               >
                 {n.label}
               </button>
             ))}
-            <Button onClick={() => scrollTo('contacts')} className="rounded-full mt-2">
-              Записаться
+            <Button onClick={() => scrollTo('contacts')} className="rounded-full mt-2 w-full">
+              Записаться на пробный день
             </Button>
           </div>
         )}
@@ -187,11 +187,11 @@ const Index = () => {
               Начальное и среднее образование в тёплой семейной атмосфере города Истра.
               Каждый ребёнок учится с радостью и остаётся собой.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row gap-3">
               <Button
                 size="lg"
                 onClick={() => scrollTo('contacts')}
-                className="rounded-full px-8"
+                className="rounded-full px-8 w-full sm:w-auto"
               >
                 Записаться на пробный день
               </Button>
@@ -199,7 +199,7 @@ const Index = () => {
                 size="lg"
                 variant="outline"
                 onClick={() => scrollTo('programs')}
-                className="rounded-full px-8 border-primary/30"
+                className="rounded-full px-8 border-primary/30 w-full sm:w-auto"
               >
                 Наши программы
               </Button>

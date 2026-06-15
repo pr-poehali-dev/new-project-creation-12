@@ -411,18 +411,21 @@ const Index = () => {
             </div>
             <div className="space-y-4">
               <a
-                href="tel:+70000000000"
+                href="tel:+79166400506"
                 className="flex items-center gap-4 bg-primary-foreground/10 rounded-2xl p-4 hover:bg-primary-foreground/20 transition-colors"
               >
                 <Icon name="Phone" size={22} />
-                <span>+7 (000) 000-00-00</span>
+                <div>
+                  <div>+7-916-640-05-06</div>
+                  <div className="text-sm opacity-70">Ирина</div>
+                </div>
               </a>
               <a
-                href="mailto:hello@familyclassistra.ru"
+                href="mailto:familyclassistra@mail.ru"
                 className="flex items-center gap-4 bg-primary-foreground/10 rounded-2xl p-4 hover:bg-primary-foreground/20 transition-colors"
               >
                 <Icon name="Mail" size={22} />
-                <span>hello@familyclassistra.ru</span>
+                <span>familyclassistra@mail.ru</span>
               </a>
               <a
                 href="https://yandex.ru/maps/?ll=36.899715%2C55.926441&mode=poi"
@@ -431,7 +434,7 @@ const Index = () => {
                 className="flex items-center gap-4 bg-primary-foreground/10 rounded-2xl p-4 hover:bg-primary-foreground/20 transition-colors"
               >
                 <Icon name="MapPin" size={22} />
-                <span>г. Истра, Московская область — на карте →</span>
+                <span>Моск. обл., г/о Истра, д. Рычково — на карте →</span>
               </a>
             </div>
           </div>

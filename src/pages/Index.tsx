@@ -160,20 +160,16 @@ const Index = () => {
       </header>
 
       {menuOpen && (
-        <div className="lg:hidden fixed top-20 left-0 right-0 bottom-0 bg-white z-40 flex flex-col overflow-y-auto border-t border-border">
-          <div className="flex flex-col px-6 py-4 gap-1">
-            {NAV.map((n) => (
-              <button
-                key={n.id}
-                onClick={() => scrollTo(n.id)}
-                className="text-left w-full py-4 text-lg text-foreground hover:text-primary transition-colors border-b border-border/50 last:border-0"
-              >
-                {n.label}
-              </button>
-            ))}
-            <Button onClick={() => scrollTo('contacts')} className="rounded-full mt-4 w-full">
-              Записаться на пробный день
-            </Button>
+        <div style={{position:'fixed',top:80,left:0,right:0,bottom:0,background:'#fff',zIndex:9999,overflowY:'auto',borderTop:'1px solid #eee'}}>
+          <div style={{display:'flex',flexDirection:'column',padding:'8px 24px'}}>
+            <button style={{textAlign:'left',padding:'16px 0',fontSize:18,borderBottom:'1px solid #eee',color:'#333',background:'none',border:'none',borderBottom:'1px solid #eee',cursor:'pointer'}} onClick={() => scrollTo('about')}>О школе</button>
+            <button style={{textAlign:'left',padding:'16px 0',fontSize:18,borderBottom:'1px solid #eee',color:'#333',background:'none',border:'none',borderBottom:'1px solid #eee',cursor:'pointer'}} onClick={() => scrollTo('programs')}>Программы</button>
+            <button style={{textAlign:'left',padding:'16px 0',fontSize:18,borderBottom:'1px solid #eee',color:'#333',background:'none',border:'none',borderBottom:'1px solid #eee',cursor:'pointer'}} onClick={() => scrollTo('teachers')}>Педагоги</button>
+            <button style={{textAlign:'left',padding:'16px 0',fontSize:18,borderBottom:'1px solid #eee',color:'#333',background:'none',border:'none',borderBottom:'1px solid #eee',cursor:'pointer'}} onClick={() => scrollTo('schedule')}>Расписание</button>
+            <button style={{textAlign:'left',padding:'16px 0',fontSize:18,borderBottom:'1px solid #eee',color:'#333',background:'none',border:'none',borderBottom:'1px solid #eee',cursor:'pointer'}} onClick={() => scrollTo('news')}>Новости</button>
+            <button style={{textAlign:'left',padding:'16px 0',fontSize:18,borderBottom:'1px solid #eee',color:'#333',background:'none',border:'none',borderBottom:'1px solid #eee',cursor:'pointer'}} onClick={() => scrollTo('faq')}>Вопросы и ответы</button>
+            <button style={{textAlign:'left',padding:'16px 0',fontSize:18,color:'#333',background:'none',border:'none',cursor:'pointer'}} onClick={() => scrollTo('contacts')}>Контакты</button>
+            <button style={{marginTop:16,padding:'14px 0',borderRadius:999,background:'hsl(18 48% 52%)',color:'#fff',fontSize:16,fontWeight:600,border:'none',cursor:'pointer',width:'100%'}} onClick={() => scrollTo('contacts')}>Записаться на пробный день</button>
           </div>
         </div>
       )}

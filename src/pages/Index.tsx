@@ -62,10 +62,10 @@ const PROGRAMS = [
 ];
 
 const TEACHERS = [
-  { name: 'Наши педагоги', role: 'Опытные и любящие детей', initials: '❤' },
-  { name: 'Малые классы', role: 'Внимание каждому', initials: '👁' },
-  { name: 'Творчество', role: 'Искусство и наука', initials: '🎨' },
-  { name: 'Английский', role: 'С первого класса', initials: '🌍' },
+  { name: 'Наши педагоги', role: 'Опытные и любящие детей', photo: 'https://cdn.poehali.dev/projects/76769409-5380-4cd1-a775-d2d98636b968/bucket/660a2861-d905-478c-8bae-0bd9c71011f9.jpg' },
+  { name: 'Малые классы', role: 'Внимание каждому', photo: 'https://cdn.poehali.dev/projects/76769409-5380-4cd1-a775-d2d98636b968/bucket/b521572d-9be8-461c-b847-54e3f5a5250a.jpg' },
+  { name: 'Творчество', role: 'Искусство и наука', photo: 'https://cdn.poehali.dev/projects/76769409-5380-4cd1-a775-d2d98636b968/bucket/44d8f223-c819-49ba-ad2a-c07dd8733141.jpg' },
+  { name: 'Походы всем классом', role: 'С первого класса', photo: 'https://cdn.poehali.dev/projects/76769409-5380-4cd1-a775-d2d98636b968/bucket/18723aea-68cf-4ca4-866f-c769692aae68.jpg' },
 ];
 
 const SCHEDULE = [
@@ -267,8 +267,8 @@ const Index = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {TEACHERS.map((t) => (
             <div key={t.name} className="text-center">
-              <div className="aspect-square rounded-3xl bg-accent flex items-center justify-center mb-4">
-                <span className="text-5xl">{t.initials}</span>
+              <div className="aspect-square rounded-3xl bg-accent mb-4 overflow-hidden">
+                <img src={t.photo} alt={t.name} className="w-full h-full object-cover" />
               </div>
               <h3 className="font-display text-xl font-semibold">{t.name}</h3>
               <p className="text-sm text-muted-foreground">{t.role}</p>

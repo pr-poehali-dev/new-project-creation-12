@@ -330,11 +330,12 @@ const Index = () => {
         <div className="grid md:grid-cols-2 gap-8">
           {NEWS.map((n) => (
             <div key={n.title} className="bg-card border border-border rounded-3xl overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="h-72 overflow-hidden">
+              <div className="h-56 overflow-hidden">
                 <img
                   src={n.img}
                   alt={n.alt}
-                  className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  style={{objectPosition: '50% 20%'}}
                 />
               </div>
               <div className="p-8">

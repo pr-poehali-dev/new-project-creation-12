@@ -179,9 +179,9 @@ const Index = () => {
       <section id="hero" className="container pt-36 pb-20 md:pt-44 md:pb-28">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-float-up">
-            <p className="font-hand text-3xl text-primary mb-4">г. Истра · частная семейная школа</p>
+            <p className="font-hand text-3xl text-primary mb-4">г. Истра · семейная школа</p>
             <h1 className="font-display text-5xl md:text-7xl font-semibold leading-[1.05] mb-6">
-              Место, где детство <span className="text-primary">растёт</span> в знание
+              Здесь учатся <span className="text-primary">думать,</span> а не просто знать
             </h1>
             <p className="text-lg text-muted-foreground max-w-md mb-8">
               Начальное и среднее образование в тёплой семейной атмосфере города Истра.

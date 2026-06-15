@@ -62,10 +62,10 @@ const PROGRAMS = [
 ];
 
 const TEACHERS = [
-  { name: 'Наши педагоги', role: 'Опытные и любящие детей', photo: 'https://cdn.poehali.dev/projects/76769409-5380-4cd1-a775-d2d98636b968/bucket/660a2861-d905-478c-8bae-0bd9c71011f9.jpg' },
-  { name: 'Малые классы', role: 'Внимание каждому', photo: 'https://cdn.poehali.dev/projects/76769409-5380-4cd1-a775-d2d98636b968/bucket/b521572d-9be8-461c-b847-54e3f5a5250a.jpg' },
-  { name: 'Творчество', role: 'Искусство и наука', photo: 'https://cdn.poehali.dev/projects/76769409-5380-4cd1-a775-d2d98636b968/bucket/44d8f223-c819-49ba-ad2a-c07dd8733141.jpg' },
-  { name: 'Походы всем классом', role: 'С первого класса', photo: 'https://cdn.poehali.dev/projects/76769409-5380-4cd1-a775-d2d98636b968/bucket/18723aea-68cf-4ca4-866f-c769692aae68.jpg' },
+  { name: 'Наши педагоги', role: 'Опытные и любящие детей', photo: 'https://cdn.poehali.dev/projects/76769409-5380-4cd1-a775-d2d98636b968/bucket/660a2861-d905-478c-8bae-0bd9c71011f9.jpg', alt: 'Команда педагогов семейной школы FamilyClassIstra в Истре' },
+  { name: 'Малые классы', role: 'Внимание каждому', photo: 'https://cdn.poehali.dev/projects/76769409-5380-4cd1-a775-d2d98636b968/bucket/b521572d-9be8-461c-b847-54e3f5a5250a.jpg', alt: 'Дети делают поделки в малом классе школы FamilyClassIstra' },
+  { name: 'Творчество', role: 'Искусство и наука', photo: 'https://cdn.poehali.dev/projects/76769409-5380-4cd1-a775-d2d98636b968/bucket/44d8f223-c819-49ba-ad2a-c07dd8733141.jpg', alt: 'Творческий праздник в семейной школе FamilyClassIstra — дети в народных костюмах' },
+  { name: 'Походы всем классом', role: 'С первого класса', photo: 'https://cdn.poehali.dev/projects/76769409-5380-4cd1-a775-d2d98636b968/bucket/18723aea-68cf-4ca4-866f-c769692aae68.jpg', alt: 'Поход всем классом на природу — школьники у озера в Подмосковье' },
 ];
 
 const SCHEDULE = [
@@ -82,12 +82,14 @@ const NEWS = [
     date: 'Июль 2026',
     text: 'Совсем скоро открывается наш Летний лагерь — и вы ещё успеваете записаться! Набираем детей на незабываемое лето: будем играть на свежем воздухе, мастерить, исследовать природу, придумывать истории и просто радоваться каждому дню вместе. Места ограничены — не откладывайте, пишите нам прямо сейчас!',
     img: PHOTO_3,
+    alt: 'Летний лагерь FamilyClassIstra 2026 — дети на природе в Подмосковье',
   },
   {
     title: 'Принимаем новых учеников',
     date: 'Август 2026',
     text: 'Школа FamilyClassIstra открывает набор в классы 2, 3, 4, 6, 8! Мы ищем ребят, которые хотят учиться в тёплой семейной атмосфере, где каждый ребёнок важен. Приходите на пробный день и познакомьтесь с нашей школой.',
     img: PHOTO_4,
+    alt: 'Набор учеников в классы 2, 3, 4, 6, 8 — семейная школа FamilyClassIstra в Истре',
   },
 ];
 
@@ -180,7 +182,7 @@ const Index = () => {
             <div className="absolute -inset-4 bg-accent rounded-[2.5rem] rotate-3" />
             <img
               src={PHOTO_1}
-              alt="familyclassistra — семейная школа в Истре"
+              alt="Дети на занятии в семейной школе FamilyClassIstra в Истре, Московская область"
               className="relative rounded-[2rem] w-full object-cover shadow-xl max-h-[520px]"
             />
           </div>
@@ -224,7 +226,7 @@ const Index = () => {
             <div className="absolute -inset-4 bg-secondary/40 rounded-[2.5rem] -rotate-2" />
             <img
               src={PHOTO_2}
-              alt="Программы обучения familyclassistra"
+              alt="Программы обучения в частной семейной школе FamilyClassIstra — малые классы, творчество, походы"
               className="relative rounded-[2rem] w-full object-cover shadow-xl max-h-[480px]"
             />
           </div>
@@ -268,7 +270,7 @@ const Index = () => {
           {TEACHERS.map((t) => (
             <div key={t.name} className="text-center">
               <div className="aspect-square rounded-3xl bg-accent mb-4 overflow-hidden">
-                <img src={t.photo} alt={t.name} className="w-full h-full object-cover" />
+                <img src={t.photo} alt={t.alt} className="w-full h-full object-cover" />
               </div>
               <h3 className="font-display text-xl font-semibold">{t.name}</h3>
               <p className="text-sm text-muted-foreground">{t.role}</p>
@@ -329,7 +331,7 @@ const Index = () => {
               <div className="h-56 overflow-hidden">
                 <img
                   src={n.img}
-                  alt={n.title}
+                  alt={n.alt}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>

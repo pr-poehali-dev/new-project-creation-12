@@ -69,11 +69,11 @@ const TEACHERS = [
 ];
 
 const SCHEDULE = [
-  { time: '08:30', title: 'Утренний круг', desc: 'Настраиваемся на день вместе' },
-  { time: '09:00', title: 'Основные уроки', desc: 'Главные предметы дня' },
-  { time: '11:30', title: 'Прогулка и обед', desc: 'Свежий воздух и отдых' },
-  { time: '13:00', title: 'Мастерские', desc: 'Творчество, наука, языки' },
-  { time: '15:00', title: 'Свободная игра', desc: 'Время для себя и друзей' },
+  { time: '09:30', title: 'Утренний круг', desc: 'Настраиваемся на день вместе' },
+  { time: '10:00', title: 'Основные уроки', desc: 'Главные предметы дня' },
+  { time: '12:30', title: 'Прогулка и обед', desc: 'Свежий воздух и отдых' },
+  { time: '14:00', title: 'Мастерские', desc: 'Творчество, наука, языки' },
+  { time: '16:00', title: 'Свободная игра', desc: 'Время для себя и друзей' },
 ];
 
 const NEWS = [
@@ -294,6 +294,7 @@ const Index = () => {
             <h2 className="font-display text-4xl md:text-5xl font-semibold">
               Как устроен наш день
             </h2>
+            <p className="text-muted-foreground mt-4">У каждого класса время и расписание может меняться</p>
           </div>
           <div className="max-w-2xl mx-auto space-y-3">
             {SCHEDULE.map((s) => (

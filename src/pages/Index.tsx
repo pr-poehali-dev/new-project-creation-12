@@ -105,14 +105,14 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground paper-texture">
+    <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/80 border-b border-border">
         <div className="container flex items-center justify-between h-20">
           <button onClick={() => scrollTo('hero')} className="flex items-center gap-2">
             <span className="text-3xl">🌱</span>
             <span className="font-display text-2xl font-semibold tracking-tight">
-              Зёрнышко
+              familyclassistra
             </span>
           </button>
           <nav className="hidden md:flex items-center gap-8">
@@ -354,11 +354,11 @@ const Index = () => {
                 <span>+7 (000) 000-00-00</span>
               </a>
               <a
-                href="mailto:hello@zernyshko.ru"
+                href="mailto:hello@familyclassistra.ru"
                 className="flex items-center gap-4 bg-primary-foreground/10 rounded-2xl p-4 hover:bg-primary-foreground/20 transition-colors"
               >
                 <Icon name="Mail" size={22} />
-                <span>hello@zernyshko.ru</span>
+                <span>hello@familyclassistra.ru</span>
               </a>
               <div className="flex items-center gap-4 bg-primary-foreground/10 rounded-2xl p-4">
                 <Icon name="MapPin" size={22} />
@@ -375,10 +375,10 @@ const Index = () => {
           <div className="flex items-center gap-2">
             <span className="text-2xl">🌱</span>
             <span className="font-display text-lg font-semibold text-foreground">
-              Зёрнышко
+              familyclassistra
             </span>
           </div>
-          <p>© 2026 Семейная школа «Зёрнышко». Растём вместе.</p>
+          <p>© 2026 Семейная школа «familyclassistra». Растём вместе.</p>
         </div>
       </footer>
     </div>

@@ -186,6 +186,8 @@ const Index = () => {
         </div>
       </section>
 
+      <div className="container"><div className="wood-divider" /></div>
+
       {/* About / Values */}
       <section id="about" className="container py-20">
         <div className="text-center max-w-2xl mx-auto mb-14">
@@ -246,6 +248,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <div className="container"><div className="wood-divider" /></div>
 
       {/* Teachers */}
       <section id="teachers" className="container py-20">
@@ -364,6 +368,8 @@ const Index = () => {
           </Accordion>
         </div>
       </section>
+
+      <div className="container"><div className="wood-divider" /></div>
 
       {/* Contacts */}
       <section id="contacts" className="container py-20">

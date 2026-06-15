@@ -116,7 +116,7 @@
     background-size: 22px 22px;
   }
 
-  /* Текстура дерева — SVG-прожилки поверх основного цвета */
+  /* Текстура дерева */
   .wood-texture {
     position: relative;
     overflow: hidden;
@@ -127,41 +127,63 @@
     inset: 0;
     pointer-events: none;
     background-image:
-      /* горизонтальные волнистые прожилки */
+      repeating-linear-gradient(
+        172deg,
+        transparent 0px,
+        transparent 4px,
+        rgba(255, 255, 255, 0.1) 4px,
+        rgba(255, 255, 255, 0.1) 5px,
+        transparent 5px,
+        transparent 10px,
+        rgba(0, 0, 0, 0.12) 10px,
+        rgba(0, 0, 0, 0.12) 11px
+      ),
+      repeating-linear-gradient(
+        168deg,
+        transparent 0px,
+        transparent 13px,
+        rgba(255, 255, 255, 0.07) 13px,
+        rgba(255, 255, 255, 0.07) 15px,
+        transparent 15px,
+        transparent 28px,
+        rgba(0, 0, 0, 0.09) 28px,
+        rgba(0, 0, 0, 0.09) 30px
+      ),
       repeating-linear-gradient(
         175deg,
         transparent 0px,
-        transparent 6px,
-        rgba(255, 255, 255, 0.04) 6px,
-        rgba(255, 255, 255, 0.04) 7px,
-        transparent 7px,
-        transparent 14px,
-        rgba(0, 0, 0, 0.06) 14px,
-        rgba(0, 0, 0, 0.06) 15px
-      ),
-      repeating-linear-gradient(
-        170deg,
-        transparent 0px,
-        transparent 18px,
-        rgba(255, 255, 255, 0.05) 18px,
-        rgba(255, 255, 255, 0.05) 20px,
-        transparent 20px,
-        transparent 34px,
-        rgba(0, 0, 0, 0.04) 34px,
-        rgba(0, 0, 0, 0.04) 36px
-      ),
-      /* мелкое зерно */
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
-    background-size:
-      100% 100%,
-      100% 100%,
-      200px 200px;
+        transparent 35px,
+        rgba(0, 0, 0, 0.05) 35px,
+        rgba(0, 0, 0, 0.05) 37px,
+        transparent 37px,
+        transparent 70px
+      );
+    background-size: 100% 100%;
     border-radius: inherit;
     z-index: 0;
   }
   .wood-texture > * {
     position: relative;
     z-index: 1;
+  }
+
+  /* Деревянный разделитель */
+  .wood-divider {
+    width: 100%;
+    height: 6px;
+    background: repeating-linear-gradient(
+      90deg,
+      hsl(25 45% 38%) 0px,
+      hsl(20 40% 32%) 8px,
+      hsl(28 50% 44%) 14px,
+      hsl(22 42% 35%) 22px,
+      hsl(26 48% 41%) 28px,
+      hsl(18 38% 30%) 36px,
+      hsl(30 52% 46%) 42px,
+      hsl(24 44% 37%) 50px
+    );
+    opacity: 0.55;
+    border-radius: 3px;
   }
 }
 

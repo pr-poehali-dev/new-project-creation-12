@@ -10,10 +10,10 @@ import {
 } from '@/components/ui/accordion';
 
 // Реальные фото со старого сайта familyclassistra.ru
-const PHOTO_1 = 'https://familyclassistra.ru/wp-content/uploads/2023/08/xz_2mi6XIQs.jpg';
-const PHOTO_2 = 'https://familyclassistra.ru/wp-content/uploads/2023/08/zsZvA15cu_4-1.jpg';
-const PHOTO_3 = 'https://familyclassistra.ru/wp-content/uploads/2023/08/sg9FkcE1gWE.jpg';
-const PHOTO_4 = 'https://familyclassistra.ru/wp-content/uploads/2023/08/x9XlMKhGHQc.jpg';
+const PHOTO_1 = 'https://cdn.poehali.dev/projects/76769409-5380-4cd1-a775-d2d98636b968/bucket/school-photos/xz_2mi6XIQs.jpg';
+const PHOTO_2 = 'https://cdn.poehali.dev/projects/76769409-5380-4cd1-a775-d2d98636b968/bucket/school-photos/zsZvA15cu_4-1.jpg';
+const PHOTO_3 = 'https://cdn.poehali.dev/projects/76769409-5380-4cd1-a775-d2d98636b968/bucket/school-photos/sg9FkcE1gWE.jpg';
+const PHOTO_4 = 'https://cdn.poehali.dev/projects/76769409-5380-4cd1-a775-d2d98636b968/bucket/school-photos/x9XlMKhGHQc.jpg';
 
 const NAV = [
   { id: 'about', label: 'О школе' },

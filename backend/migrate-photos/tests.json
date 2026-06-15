@@ -1,0 +1,10 @@
+{
+  "tests": [
+    {
+      "name": "Migrate photos from old site to S3",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200
+    }
+  ]
+}

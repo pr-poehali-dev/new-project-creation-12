@@ -158,17 +158,17 @@ const Index = () => {
           </button>
         </div>
         {menuOpen && (
-          <div className="md:hidden border-t border-border bg-white/95 px-4 py-3 flex flex-col gap-1 max-h-[calc(100vh-80px)] overflow-y-auto">
+          <div className="md:hidden absolute top-20 left-0 right-0 border-t border-border bg-white shadow-lg px-4 py-3 flex flex-col gap-1 max-h-[calc(100vh-80px)] overflow-y-auto z-50">
             {NAV.map((n) => (
               <button
                 key={n.id}
                 onClick={() => scrollTo(n.id)}
-                className="text-left py-2 px-2 text-muted-foreground hover:text-primary transition-colors rounded-lg"
+                className="text-left py-3 px-2 text-muted-foreground hover:text-primary transition-colors rounded-lg border-b border-border/50 last:border-0"
               >
                 {n.label}
               </button>
             ))}
-            <Button onClick={() => scrollTo('contacts')} className="rounded-full mt-2 w-full">
+            <Button onClick={() => scrollTo('contacts')} className="rounded-full mt-3 mb-1 w-full">
               Записаться на пробный день
             </Button>
           </div>

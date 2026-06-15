@@ -367,44 +367,43 @@ const Index = () => {
 
       {/* Contacts */}
       <section id="contacts" className="container py-20">
-        <div className="bg-primary text-primary-foreground rounded-[2.5rem] p-10 md:p-16">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div className="bg-primary text-primary-foreground rounded-2xl md:rounded-[2.5rem] p-6 md:p-16">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <p className="font-hand text-3xl mb-3 opacity-90">г. Истра, Московская область</p>
-              <h2 className="font-display text-4xl md:text-5xl font-semibold mb-4">
+              <p className="font-hand text-2xl mb-3 opacity-90">г. Истра, Московская область</p>
+              <h2 className="font-display text-3xl md:text-5xl font-semibold mb-4">
                 Запишитесь на пробный день
               </h2>
-              <p className="opacity-80 max-w-sm">
-                Познакомьтесь со школой, педагогами и атмосферой. Мы расскажем
-                всё о поступлении и ответим на любые вопросы.
+              <p className="opacity-80 text-sm md:text-base">
+                Познакомьтесь со школой, педагогами и атмосферой. Ответим на любые вопросы.
               </p>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-3">
               <a
                 href="tel:+79166400506"
-                className="flex items-center gap-4 bg-primary-foreground/10 rounded-2xl p-4 hover:bg-primary-foreground/20 transition-colors"
+                className="flex items-center gap-3 bg-primary-foreground/10 rounded-xl p-3 hover:bg-primary-foreground/20 transition-colors"
               >
-                <Icon name="Phone" size={22} />
-                <div>
-                  <div>+7-916-640-05-06</div>
+                <Icon name="Phone" size={20} className="shrink-0" />
+                <div className="min-w-0">
+                  <div className="font-medium">+7-916-640-05-06</div>
                   <div className="text-sm opacity-70">Ирина</div>
                 </div>
               </a>
               <a
                 href="mailto:familyclassistra@mail.ru"
-                className="flex items-center gap-4 bg-primary-foreground/10 rounded-2xl p-4 hover:bg-primary-foreground/20 transition-colors"
+                className="flex items-center gap-3 bg-primary-foreground/10 rounded-xl p-3 hover:bg-primary-foreground/20 transition-colors"
               >
-                <Icon name="Mail" size={22} />
-                <span>familyclassistra@mail.ru</span>
+                <Icon name="Mail" size={20} className="shrink-0" />
+                <span className="break-all text-sm md:text-base">familyclassistra@mail.ru</span>
               </a>
               <a
                 href="https://yandex.ru/maps/?ll=36.899715%2C55.926441&mode=poi"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 bg-primary-foreground/10 rounded-2xl p-4 hover:bg-primary-foreground/20 transition-colors"
+                className="flex items-center gap-3 bg-primary-foreground/10 rounded-xl p-3 hover:bg-primary-foreground/20 transition-colors"
               >
-                <Icon name="MapPin" size={22} />
-                <span>Моск. обл., г/о Истра, д. Рычково — на карте →</span>
+                <Icon name="MapPin" size={20} className="shrink-0" />
+                <span className="text-sm md:text-base">Моск. обл., г/о Истра, д. Рычково — на карте →</span>
               </a>
             </div>
           </div>

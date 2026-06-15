@@ -413,73 +413,17 @@ const Index = () => {
       {/* Footer */}
       <footer className="border-t border-border bg-card">
         <div className="container py-14">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-            {/* Brand */}
-            <div className="md:col-span-1">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="text-2xl">🌱</span>
-                <span className="font-display text-xl font-semibold text-foreground">
-                  FamilyClassIstra
-                </span>
-              </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Семейная школа начального и среднего образования в деревне Рычково, г/о Истра.
-              </p>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">🌱</span>
+              <span className="font-display text-xl font-semibold text-foreground">FamilyClassIstra</span>
             </div>
-
-            {/* Nav */}
-            <div>
-              <h4 className="font-semibold text-sm text-foreground mb-4 uppercase tracking-wider">Школа</h4>
-              <ul className="space-y-3 text-sm text-muted-foreground">
-                {['about', 'programs', 'teachers', 'schedule'].map((id) => {
-                  const label = NAV.find((n) => n.id === id)?.label;
-                  return (
-                    <li key={id}>
-                      <button onClick={() => scrollTo(id)} className="hover:text-primary transition-colors">
-                        {label}
-                      </button>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-
-            {/* More */}
-            <div>
-              <h4 className="font-semibold text-sm text-foreground mb-4 uppercase tracking-wider">Информация</h4>
-              <ul className="space-y-3 text-sm text-muted-foreground">
-                {['news', 'faq', 'contacts'].map((id) => {
-                  const label = NAV.find((n) => n.id === id)?.label;
-                  return (
-                    <li key={id}>
-                      <button onClick={() => scrollTo(id)} className="hover:text-primary transition-colors">
-                        {label}
-                      </button>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-
-            {/* Contacts */}
-            <div>
-              <h4 className="font-semibold text-sm text-foreground mb-4 uppercase tracking-wider">Контакты</h4>
-              <ul className="space-y-3 text-sm text-muted-foreground">
-                <li>
-                  <a href="tel:+79166400506" className="hover:text-primary transition-colors">
-                    +7-916-640-05-06 (Ирина)
-                  </a>
-                </li>
-                <li>
-                  <a href="mailto:familyclassistra@mail.ru" className="hover:text-primary transition-colors">
-                    familyclassistra@mail.ru
-                  </a>
-                </li>
-                <li className="leading-snug">
-                  Моск. обл., г/о Истра,<br />д. Рычково
-                </li>
-              </ul>
-            </div>
+            <p className="text-sm text-muted-foreground text-center md:text-right">
+              Семейная школа, г/о Истра, д. Рычково<br />
+              <a href="tel:+79166400506" className="hover:text-primary transition-colors">+7-916-640-05-06</a>
+              {' · '}
+              <a href="mailto:familyclassistra@mail.ru" className="hover:text-primary transition-colors">familyclassistra@mail.ru</a>
+            </p>
           </div>
 
           <div className="border-t border-border pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-muted-foreground">

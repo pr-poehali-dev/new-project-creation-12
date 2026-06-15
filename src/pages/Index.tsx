@@ -377,14 +377,14 @@ const Index = () => {
 
       {/* Contacts */}
       <section id="contacts" className="container py-20">
-        <div className="wood-texture bg-primary text-primary-foreground rounded-2xl md:rounded-[2.5rem] p-6 md:p-16">
+        <div className="wood-texture bg-primary text-white rounded-2xl md:rounded-[2.5rem] p-6 md:p-16">
           <div className="grid md:grid-cols-2 gap-8 items-center mb-10">
             <div>
-              <p className="font-hand text-2xl mb-3 opacity-90">г. Истра, Московская область</p>
+              <p className="font-hand text-2xl mb-3">г. Истра, Московская область</p>
               <h2 className="font-display text-3xl md:text-5xl font-semibold mb-4">
                 Запишитесь на пробный день
               </h2>
-              <p className="opacity-80 text-sm md:text-base">
+              <p className="text-sm md:text-base">
                 Познакомьтесь со школой, педагогами и атмосферой. Ответим на любые вопросы.
               </p>
             </div>

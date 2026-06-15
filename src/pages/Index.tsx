@@ -335,6 +335,7 @@ const Index = () => {
                   src={n.img}
                   alt={n.alt}
                   className="w-full h-[110%] object-cover hover:scale-105 transition-transform duration-500"
+                  style={{objectPosition: '50% 47%'}}
                 />
               </div>
               <div className="p-8">

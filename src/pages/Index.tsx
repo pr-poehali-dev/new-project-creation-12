@@ -154,7 +154,7 @@ const Index = () => {
           <div className="animate-float-up">
             <p className="font-hand text-3xl text-primary mb-4">г. Истра · семейная школа</p>
             <h1 className="font-display text-5xl md:text-7xl font-semibold leading-[1.05] mb-6">
-              Здесь учатся <span className="text-primary">думать,</span> а не просто знать
+              Школа, где детям <span className="text-primary">хочется</span> учиться
             </h1>
             <p className="text-lg text-muted-foreground max-w-md mb-8">
               Начальное и среднее образование в тёплой семейной атмосфере города Истра.

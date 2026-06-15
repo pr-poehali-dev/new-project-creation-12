@@ -367,7 +367,7 @@ const Index = () => {
 
       {/* Contacts */}
       <section id="contacts" className="container py-20">
-        <div className="bg-primary text-primary-foreground rounded-2xl md:rounded-[2.5rem] p-6 md:p-16">
+        <div className="wood-texture bg-primary text-primary-foreground rounded-2xl md:rounded-[2.5rem] p-6 md:p-16">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <p className="font-hand text-2xl mb-3 opacity-90">г. Истра, Московская область</p>

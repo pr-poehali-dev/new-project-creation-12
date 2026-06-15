@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://familyclassistra.poehali.dev/sitemap.xml
+Sitemap: https://familyclassistra.ru/sitemap.xml

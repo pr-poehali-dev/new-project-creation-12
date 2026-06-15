@@ -142,7 +142,7 @@ const Index = () => {
               </button>
             ))}
           </nav>
-          <Button onClick={() => scrollTo('contacts')} className="rounded-full text-sm px-4">
+          <Button onClick={() => scrollTo('contacts')} className="rounded-full text-sm px-4 text-white">
             Записаться
           </Button>
         </div>

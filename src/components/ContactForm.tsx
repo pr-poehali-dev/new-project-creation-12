@@ -38,11 +38,11 @@ export default function ContactForm() {
     }
   };
 
-  const inputCls = 'w-full rounded-xl bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 px-4 py-3 text-sm outline-none focus:border-primary-foreground/60 transition-colors';
+  const inputCls = 'w-full rounded-xl bg-white/15 border border-white/30 text-white placeholder:text-white/60 px-4 py-3 text-sm outline-none focus:border-white/70 transition-colors';
 
   if (sent) {
     return (
-      <div className="flex flex-col items-center gap-3 py-8 text-center text-primary-foreground">
+      <div className="flex flex-col items-center gap-3 py-8 text-center text-white">
         <div className="w-14 h-14 rounded-full bg-primary-foreground/15 flex items-center justify-center">
           <Icon name="Check" size={28} />
         </div>
@@ -58,7 +58,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={submit} className="grid md:grid-cols-2 gap-4">
       <div className="flex flex-col gap-1">
-        <label className="text-xs opacity-70 font-medium">Имя *</label>
+        <label className="text-xs text-white/80 font-medium">Имя *</label>
         <input
           required
           value={form.name}
@@ -68,7 +68,7 @@ export default function ContactForm() {
         />
       </div>
       <div className="flex flex-col gap-1">
-        <label className="text-xs opacity-70 font-medium">Телефон *</label>
+        <label className="text-xs text-white/80 font-medium">Телефон *</label>
         <input
           required
           type="tel"
@@ -79,7 +79,7 @@ export default function ContactForm() {
         />
       </div>
       <div className="flex flex-col gap-1">
-        <label className="text-xs opacity-70 font-medium">В какой класс?</label>
+        <label className="text-xs text-white/80 font-medium">В какой класс?</label>
         <select value={form.grade} onChange={set('grade')} className={inputCls}>
           <option value="" className="text-foreground bg-background">— выберите —</option>
           {CLASSES.map((c) => (
@@ -88,7 +88,7 @@ export default function ContactForm() {
         </select>
       </div>
       <div className="flex flex-col gap-1">
-        <label className="text-xs opacity-70 font-medium">Комментарий</label>
+        <label className="text-xs text-white/80 font-medium">Комментарий</label>
         <textarea
           value={form.comment}
           onChange={set('comment')}
@@ -101,7 +101,7 @@ export default function ContactForm() {
         <div className="md:col-span-2 text-sm text-red-300">{error}</div>
       )}
       <div className="md:col-span-2 flex justify-end pt-1">
-        <Button type="submit" size="lg" disabled={loading} className="rounded-full px-8 bg-primary-foreground text-primary hover:bg-primary-foreground/90 w-full md:w-auto">
+        <Button type="submit" size="lg" disabled={loading} className="rounded-full px-8 bg-white text-primary hover:bg-white/90 w-full md:w-auto font-semibold">
           <Icon name={loading ? 'Loader' : 'Send'} size={16} className={loading ? 'animate-spin' : ''} />
           {loading ? 'Отправляем...' : 'Отправить заявку'}
         </Button>
